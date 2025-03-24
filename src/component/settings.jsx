@@ -13,6 +13,9 @@ function Setting(prop) {
            <p>Delete Account</p>
         </div>
         <div className="set1-3">
+           <p>Change Password</p>
+        </div>
+        <div className="set1-4">
            <button>Log out</button>
         </div>
       </div>

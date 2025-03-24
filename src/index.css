@@ -313,6 +313,30 @@ margin-top: 80px;
     border-radius: 15px;
     padding: 10px 2%;
   }
+  .set1-3{
+    margin-left: 3%;
+    margin-right: 3%;
+    border: 3px solid gray;
+    box-shadow: 4px 6px 2px 2px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 10px 2%;
+  }
+  .whatsapp{
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 70px;
+    transform: translate(260px, 0px);
+  }
+  .whp{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    overflow: hidden;
+    margin-top: 6px;
+    margin-bottom: 20px;
+  }
 @media (max-width: 375px) {
     .sign-up{
         width: 100%;

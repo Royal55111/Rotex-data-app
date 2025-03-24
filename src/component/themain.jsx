@@ -64,6 +64,12 @@ function Main(prop) {
           </div>
         </div>
       </div>
+      
+        <div className="whatsapp">
+        </div>
+        <div className="whp">
+          <p>join our whatsapp <br />group for update's</p>
+        </div>
     </div>
   );
 }
