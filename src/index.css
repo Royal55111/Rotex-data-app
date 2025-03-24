@@ -15,6 +15,7 @@
     margin-top: 20px;
     padding-top: 10px;
     padding-left: 30px;
+    overflow: hidden;
   }
   .nav1{
    display: flex;
@@ -47,6 +48,7 @@
     border-radius: 80px;
     border: 3px solid gray;
     box-shadow: 5px 5px rgba(58, 53, 53, 0.6);
+    overflow: hidden;
 }
 .sign-up h1{
     display: flex;
@@ -228,6 +230,10 @@ margin-top: 80px;
     gap: 7rem;
     margin-top: 90px;
 }
+.sim1-1{
+    display: flex;
+    gap: 7rem;
+}
 .sim-card1 {
     width: 80px;
     height: 100px;
@@ -314,6 +320,9 @@ margin-top: 80px;
         padding-top: 20px;
         padding-left: 20px;
         padding-right: 20px;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
     }
     .sign-up input{
       width: 100%;
@@ -332,11 +341,37 @@ margin-top: 80px;
         margin: 0px;
         padding-top: 20px;
         margin-top: 50px;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
     }
     .forgotten input{
         font-size: 20px;
     }
     .forgotten{
         width: 80%;
+        margin-left: 40px;
+        margin-top: 150px;
+    }
+    .sim{
+        margin-bottom: 30px;
+    }
+    .sim1-1{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .buy{
+       margin-left: 4.5px;
+    }
+    .sim h1{
+        font-size: 25px;
+    }
+    .nav-icon{
+        transform: translate(40px, 0px);
+        font-size: 25px;
+    }
+    .inp{
+        padding-top: 20px;
     }
 }

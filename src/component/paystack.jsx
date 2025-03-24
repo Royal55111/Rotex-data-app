@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { PaystackButton } from 'react-paystack';
 import { Firestore } from 'firebase/firestore';
 import { firestore } from './firebaseConfig';
@@ -7,33 +7,9 @@ const PaystackPayment = ({ email }) => {
   const publicKey = 'pk_live_98a6433e5f2d9938354585ccf85318bb6f6b089b'; // Use your Paystack Live Public Key
   const currency = 'NGN';
   const [amount, setAmount] = useState('');
-  const [transactions, setTransactions] = useState([]);
+ 
 
-  // Fetch transactions from Firestore
-  useEffect(() => {
-    const fetchTransactions = async () => {
-      const snapshot = await firestore.collection('transactions').orderBy('date', 'desc').get();
-      const transactionData = snapshot.docs.map(doc => doc.data());
-      setTransactions(transactionData);
-    };
 
-    fetchTransactions();
-  }, []);
-
-  // Save transaction to Firestore
-  const saveTransaction = async (reference, amount) => {
-    try {
-      await firestore.collection('transactions').add({
-        reference,
-        amount,
-        email,
-        date: new Date().toISOString(),
-      });
-      alert("Transaction saved successfully!");
-    } catch (error) {
-      console.error("Error saving transaction: ", error);
-    }
-  };
 
   const componentProps = {
     email,
@@ -44,7 +20,6 @@ const PaystackPayment = ({ email }) => {
     text: "Pay Now",
     onSuccess: (response) => {
       alert(`Payment Successful! Reference: ${response.reference}`);
-      saveTransaction(response.reference, amount);
     },
     onClose: () => {
       alert("Transaction Cancelled!");
@@ -62,14 +37,6 @@ const PaystackPayment = ({ email }) => {
       />
       <PaystackButton {...componentProps} />
 
-      <h2>Transaction History</h2>
-      <ul>
-        {transactions.map((txn, index) => (
-          <li key={index}>
-            <strong>Amount:</strong> ₦{txn.amount} | <strong>Ref:</strong> {txn.reference} | <strong>Date:</strong> {new Date(txn.date).toLocaleString()}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };

@@ -42,6 +42,10 @@ function getData(event){
     }
   })
 }
+function go (event) {
+  event.preventDefault();
+  navigate("themain")
+}
 
 function fun (event) {
   event.preventDefault();
@@ -112,7 +116,7 @@ event.preventDefault();
         <Route index element={<Rotex getData={getData} firstName={allData.firstName} surName={allData.surName} userName={allData.userName} email={allData.email} telNumber={allData.telNumber} Password={allData.Password}  submitLogin={submitLogin} loginData={loginData} fun={fun}/>}/>
         <Route path="themain" element={<Main getData={getData} email={allData.email} userName={allData.userName} settings={settings}/>}/>
         <Route path="forget" element={<Forget getData={getData} email={allData.email} Forgot={Forgot}/>}/>
-        <Route path="setting" element={<Setting />}/>
+        <Route path="setting" element={<Setting go={go}/>}/>
       </Routes>
     </div>
   )

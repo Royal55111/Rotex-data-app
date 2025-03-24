@@ -10,6 +10,14 @@ function Main(prop) {
     });
   }
 
+  const [showBalance, setShowBalance] = useState(true);
+
+  function show() {
+    setShowBalance((prev)=> {
+      return !prev;
+    })
+  }
+
   return (
     <div>
       <nav className="naver">
@@ -19,7 +27,7 @@ function Main(prop) {
             <h1>OTEX</h1>
           </div>
           <div className="nav-icon" onClick={prop.settings}>
-          <i className="bi-gear-fill"></i>
+            <i className="bi-gear-fill"></i>
           </div>
         </div>
       </nav>
@@ -31,11 +39,11 @@ function Main(prop) {
           <p>
             Available balance{" "}
             <i
-              className={icon == true ? "bi-eye-fill" : "bi-eye-slash-fill"}
-              onClick={changeIcon}
+              className={showBalance == true ? "bi-eye-fill" : "bi-eye-slash-fill"}
+              onClick={show}
             ></i>
           </p>
-          <p>{"\u20A6"}0.00</p>
+          <p>{"\u20A6"}{showBalance ? "0.00": "****"}</p>
         </div>
         <div className="inp">
           <PaystackPayment email="customer@email.com" />
@@ -46,16 +54,15 @@ function Main(prop) {
           <h1>Select your network provider</h1>
         </div>
         <div className="sim1">
-        <div className="sim-card1">
+          <div className="sim1-1">
+            <div className="sim-card1"></div>
+            <div className="sim-card2"></div>
           </div>
-          <div className="sim-card2">
-          </div>
-          <div className="sim-card3">
-          </div>
-          <div className="sim-card4">
+          <div className="sim1-1">
+            <div className="sim-card3"></div>
+            <div className="sim-card4"></div>
           </div>
         </div>
-          
       </div>
     </div>
   );
