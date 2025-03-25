@@ -322,13 +322,18 @@ margin-top: 80px;
     padding: 10px 2%;
   }
   .whatsapp{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border: 1px solid black;
     border-radius: 50%;
     margin-top: 70px;
     transform: translate(260px, 0px);
-  }
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: white;
+ }
   .whp{
     display: flex;
     justify-content: flex-end;
