@@ -65,7 +65,7 @@ function Main(prop) {
         </div>
       </div>
       
-        <div className="whatsapp">
+        <div className="whatsapp" onClick={() => window.location.href = "https://chat.whatsapp.com/FOO9KdSgUQOF1yB0t374qX"}>
         </div>
         <div className="whp">
           <p>join our whatsapp <br />group for update's</p>
