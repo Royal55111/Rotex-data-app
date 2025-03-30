@@ -8,11 +8,16 @@ function Setting(prop) {
       <div className="set1">
         <div className="set1-1">
           <p>Dark Mode</p>
+          <div className="toggle">
+            <div className="toggle1">
+
+            </div>
+          </div>
         </div>
         <div className="set1-2">
            <p>Delete Account</p>
         </div>
-        <div className="set1-3">
+        <div className="set1-3" onClick={prop.fun}>
            <p>Change Password</p>
         </div>
         <div className="set1-4">
