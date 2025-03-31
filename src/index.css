@@ -432,3 +432,17 @@ margin-top: 80px;
         background-color: white;
      }
 }
+@media (max-width: 344px) {
+  .buy p{
+    margin-top: -20px;
+  }
+  .buy{
+    padding-top: 10px;
+  }
+  .inp{
+    margin-top: -13px;
+  }
+  .nav-icon{
+    transform: translate(30px, 0px);
+  }
+}
