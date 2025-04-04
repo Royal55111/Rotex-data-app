@@ -1,4 +1,24 @@
+import { useState } from "react"
+
 function Setting(prop) {
+  const toggleStyle = {
+    display: "flex",
+    justifyContent: prop.theme ? "flex-end" : "flex-start",
+  }
+
+  const [toggle1,setToggle1] = useState(false)
+
+function changeColor(){
+  setToggle1((prev)=>{
+    return !prev
+   
+  })
+  prop.changeTheme()
+}
+
+const toggle1Style = {
+  backgroundColor: toggle1 ? "blue":"white",
+}
   return (
     <div>
       <div className="set">
@@ -6,10 +26,10 @@ function Setting(prop) {
        <p>Settings</p>
       </div>
       <div className="set1">
-        <div className="set1-1">
+        <div className="set1-1" onClick={changeColor}>
           <p>Dark Mode</p>
-          <div className="toggle">
-            <div className="toggle1">
+          <div className="toggle" style={toggleStyle}>
+            <div className="toggle1" style={toggle1Style}>
 
             </div>
           </div>

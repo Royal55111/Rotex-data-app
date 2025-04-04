@@ -4,15 +4,17 @@
     margin: 0px;
     font-family: serif;
   }
-  body{
+  .theme {
     background-color: rgb(174, 174, 236);
     color: green;
+    padding-top: 20px;
+    height: 100vh;
+    overflow-y: scroll;
   }
   .naver{
     background-color: white;
     height: 80px;
     border-radius: 50px;
-    margin-top: 20px;
     padding-top: 10px;
     padding-left: 30px;
     overflow: hidden;
@@ -23,7 +25,7 @@
    justify-content: center;
   }
   .nav1-image{
-    background-image: url(../public/new_R-removebg-preview.png);
+    background-image: url(../new_R-removebg-preview.png);
     height: 60px;
     width: 70px;
     background-position: center;
@@ -172,6 +174,7 @@
     align-items: center;
     margin-top: 200px;
     gap: 1rem;
+  
 }
 .forgotten input{
     font-size: 30px;
@@ -336,6 +339,7 @@ margin-top: 80px;
     background-position: center;
     background-size: contain;
     background-color: white;
+    overflow: hidden;
  }
   .whp{
     display: flex;
@@ -344,12 +348,15 @@ margin-top: 80px;
     overflow: hidden;
     margin-top: 6px;
     margin-bottom: 20px;
+    overflow: hidden;
   }
   .toggle{
     width: 80px;
     border: 1px solid black;
     height: 40px;
     border-radius: 30px;
+    display: flex;
+    justify-content: flex-start;
   }
   .toggle1{
     width: 38px;
@@ -445,4 +452,78 @@ margin-top: 80px;
   .nav-icon{
     transform: translate(30px, 0px);
   }
+  .sim h1{
+    font-size: 25px;
+}
+}
+@media (max-width: 430px) {
+  .buy p{
+    margin-top: -20px;
+  }
+  .buy{
+    padding-top: 10px;
+    margin-left: 4.5px;
+  }
+  .inp{
+    margin-top: -13px;
+  }
+  .nav-icon{
+    transform: translate(30px, 0px);
+  }
+  .sim{
+    margin-bottom: 30px;
+}
+.sim1-1{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.whatsapp{
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-top: 70px;
+  transform: translate(270px, 0px);
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: white;
+}
+.sim h1{
+  font-size: 25px;
+}
+.sign-up{
+  width: 100%;
+  margin-left: 0px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+.sign-up input{
+width: 100%;
+}
+.sign-up3 i{
+  transform: translate(100px,-45px);
+}
+.checkbox{
+  width: 100%;
+  padding-bottom: 10px;
+}
+.checkbox input{
+  width: 20px;
+}
+.login{
+  margin: 0px;
+  padding-top: 20px;
+  margin-top: 50px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
 }

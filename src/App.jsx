@@ -106,17 +106,26 @@ event.preventDefault();
   }, 100)
 }
 
+const [theme,setTheme] = useState(false)
+
+function changeTheme(){
+  setTheme((prev)=> {
+    return !prev;
+  }
+)
+}
+
+const themeStyle = {
+  backgroundColor: theme ? " rgb(54, 54, 66)":"rgb(174, 174, 236)",
+}
+
   return (
-    <div>
-    <div>
-    
-   
-    </div>
+    <div className="theme" style={themeStyle}>
       <Routes>
         <Route index element={<Rotex getData={getData} firstName={allData.firstName} surName={allData.surName} userName={allData.userName} email={allData.email} telNumber={allData.telNumber} Password={allData.Password}  submitLogin={submitLogin} loginData={loginData} fun={fun}/>}/>
         <Route path="themain" element={<Main getData={getData} email={allData.email} userName={allData.userName} settings={settings}/>}/>
         <Route path="forget" element={<Forget getData={getData} email={allData.email} Forgot={Forgot}/>}/>
-        <Route path="setting" element={<Setting go={go} fun={fun}/>}/>
+        <Route path="setting" element={<Setting go={go} fun={fun} changeTheme={changeTheme} theme={theme}/>}/>
       </Routes>
     </div>
   )
