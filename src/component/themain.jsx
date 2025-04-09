@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import PaystackPayment from "./paystack";
+
 
 function Main(prop) {
   let [icon, setIcon] = useState(true);
@@ -32,7 +32,7 @@ function Main(prop) {
         </div>
       </nav>
       <div>
-        <p>Hello {prop.getData.userName}</p>
+        <p>Hello {prop.saveName}</p>
       </div>
       <div className="buy">
         <div>
@@ -46,7 +46,7 @@ function Main(prop) {
           <p>{"\u20A6"}{showBalance ? "0.00": "****"}</p>
         </div>
         <div className="inp">
-          <PaystackPayment email="customer@email.com" />
+          
         </div>
       </div>
       <div className="sim">

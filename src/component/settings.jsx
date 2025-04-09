@@ -34,13 +34,15 @@ const toggle1Style = {
             </div>
           </div>
         </div>
-        <div className="set1-2">
+        <div className="set1-2" onClick={prop.handleDelete}>
            <p>Delete Account</p>
+           <div className="bi-chevron-right"></div>
         </div>
         <div className="set1-3" onClick={prop.fun}>
            <p>Change Password</p>
+           <div className="bi-chevron-right"></div>
         </div>
-        <div className="set1-4">
+        <div className="set1-4" onClick={prop.handleLogout}>
            <button>Log out</button>
         </div>
       </div>

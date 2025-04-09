@@ -312,6 +312,9 @@ margin-top: 80px;
     padding: 10px 2%;
   }
   .set1-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-left: 3%;
     margin-right: 3%;
     border: 3px solid gray;
@@ -320,6 +323,9 @@ margin-top: 80px;
     padding: 10px 2%;
   }
   .set1-3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-left: 3%;
     margin-right: 3%;
     border: 3px solid gray;
